@@ -12,13 +12,15 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Service
-@AllArgsConstructor
 public class FuncionarioService {
 
     private final FuncionarioRepository funcionarioRepository;
     private final ModelMapper mapper;
 
-
+    public FuncionarioService(FuncionarioRepository funcionarioRepository, ModelMapper mapper) {
+        this.funcionarioRepository = funcionarioRepository;
+        this.mapper = mapper;
+    }
 
 
     public Page<FuncionarioDto> findAll(Pageable paginacao) {

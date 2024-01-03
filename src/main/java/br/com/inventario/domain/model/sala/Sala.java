@@ -2,7 +2,7 @@ package br.com.inventario.domain.model.sala;
 
 import java.util.UUID;
 
-import br.com.inventario.domain.model.bens.Bens;
+import br.com.inventario.domain.model.bensPermanentes.BensPermanentes;
 import br.com.inventario.domain.model.departamento.Departamento;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,5 +24,5 @@ public class Sala {
     private String nome;
     private Integer andar;
     private Departamento departamento;
-    private Bens bens;
+    private BensPermanentes bens;
 }
