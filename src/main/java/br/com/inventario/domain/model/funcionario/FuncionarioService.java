@@ -35,8 +35,8 @@ public class FuncionarioService {
 
     public FuncionarioDto save(FuncionarioDto dados) {
         var funcionario = mapper.map(dados, Funcionario.class);
-        funcionarioRepository.save(funcionario);
-        return mapper.map(funcionario, FuncionarioDto.class);
+        var funcionarioSalvo = funcionarioRepository.save(funcionario);
+        return mapper.map(funcionarioSalvo, FuncionarioDto.class);
     }
 
     public FuncionarioDto update(UUID id, @Valid FuncionarioDto dados) {
